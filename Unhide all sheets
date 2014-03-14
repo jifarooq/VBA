@@ -1,0 +1,14 @@
+Sub unhide_all_sheets()
+
+   'this short macro unhides all tabs in a workbook that are hidden
+
+    Application.DisplayAlerts = False
+    Dim ws As Worksheet
+    
+    For Each ws In ActiveWorkbook.Worksheets
+        ws.Visible = True
+    Next ws
+    
+    Application.DisplayAlerts = True
+    
+End Sub
