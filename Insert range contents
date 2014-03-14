@@ -1,0 +1,13 @@
+Sub insert_range_contents()
+
+' takes contents of a range, say formulas, and inserts them to another range exactly (e.g. not by relative reference)
+' fromFormulaRange has the contents/formulas you want to copy
+' toFormulaRange is the range you want the contents/formulas to paste to
+
+    Dim fromFormulaRange As Range, toFormulaRange As Range
+    Set fromFormulaRange = Selection
+    Set toFormulaRange = Application.InputBox("Choose the output range (place formulas)", "Range 1", Type:=8)
+    
+    toFormulaRange.Formula = fromFormulaRange.Formula
+
+End Sub
