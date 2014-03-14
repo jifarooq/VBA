@@ -1,0 +1,7 @@
+Sub remove_data_validation()
+
+' removes data validation (drop-down menus) in a cell or range
+
+    Selection.Validation.Delete
+    
+End Sub
